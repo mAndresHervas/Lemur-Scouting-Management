@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="981.0" prefWidth="2258.0" styleClass="root" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lemur.ROLLCALL.controller.ControllerFaltas">
+    <children>
+        <StackPane layoutY="116.0" prefHeight="869.0" prefWidth="2258.0">
+            <children>
+                <ProgressIndicator fx:id="progressIndicator" maxHeight="156.0" maxWidth="181.0" prefHeight="156.0" prefWidth="181.0" progress="0.0" />
+                <!-- Tabla de faltas -->
+                <TableView fx:id="attendanceTable" layoutY="107.0" prefHeight="874.0" prefWidth="2258.0" styleClass="table-view">
+                    <columns>
+                        <TableColumn fx:id="colFecha" prefWidth="305.60001850128174" text="Data" />
+                        <TableColumn fx:id="colJustificada" prefWidth="623.9999694824219" text="Justificada" />
+                    </columns>
+                </TableView>
+            </children>
+        </StackPane>
+
+        <!-- Contenedor para los botones -->
+        <HBox layoutX="14.0" layoutY="45.0" spacing="20">
+            <!-- Botón Justificar -->
+            <VBox alignment="CENTER" spacing="2">
+                <Button fx:id="btnJustificarFalta" onAction="#justificar" prefHeight="34.0" prefWidth="42.0" styleClass="icon-button">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <graphic>
+                  <ImageView fitHeight="28.0" fitWidth="27.0" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Assets/icon/marca-de-verificacion.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+                </Button>
+                <Label styleClass="icon-label" text="Justificar" />
+            </VBox>
+         <VBox alignment="CENTER" spacing="2">
+            <children>
+               <Button fx:id="btnDesJustificarFalta" onAction="#desJustificar" prefHeight="34.0" prefWidth="42.0" styleClass="icon-button">
+                  <cursor>
+                     <Cursor fx:constant="HAND" />
+                  </cursor>
+                  <graphic>
+                     <ImageView fitHeight="28.0" fitWidth="27.0" preserveRatio="true">
+                        <image>
+                           <Image url="@../../Assets/icon/decrementar.png" />
+                        </image>
+                     </ImageView>
+                  </graphic>
+               </Button>
+               <Label styleClass="icon-label" text="Des-Justificar" />
+            </children>
+         </VBox>
+
+            <!-- Botón Eliminar -->
+            <VBox alignment="CENTER" spacing="2">
+                <Button fx:id="btnEliminarFalta" onAction="#eliminarFalta" prefHeight="35.0" prefWidth="38.0" styleClass="icon-button">
+               <graphic>
+                  <ImageView fitHeight="28.0" fitWidth="27.0" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Assets/icon/eliminar.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </graphic>
+                </Button>
+                <Label styleClass="icon-label" text="Eliminar" />
+            </VBox>
+         <Separator orientation="VERTICAL" prefHeight="33.0" prefWidth="6.0" />
+
+            <!-- Botón Exportar CSV -->
+            <VBox alignment="CENTER" spacing="2">
+                <Button fx:id="btnExportarCSV" onAction="#enviarInfoParaCSV" prefHeight="32.0" prefWidth="47.0" styleClass="icon-button">
+               <graphic>
+                  <ImageView fitHeight="28.0" fitWidth="27.0" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Assets/icon/exportarCSV.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+                </Button>
+                <Label styleClass="icon-label" text="Exportar CSV" />
+            </VBox>
+
+            <!-- Botón Exportar PDF -->
+            <VBox alignment="CENTER" spacing="2">
+                <Button fx:id="btnExportarPDF" onAction="#enviarInfoParaPDF" prefHeight="35.0" prefWidth="41.0" styleClass="icon-button">
+               <graphic>
+                  <ImageView fitHeight="28.0" fitWidth="27.0" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Assets/icon/exportarPDF.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+                </Button>
+                <Label styleClass="icon-label" text="Exportar PDF" />
+            </VBox>
+         <Separator orientation="VERTICAL" prefHeight="33.0" prefWidth="6.0" />
+
+            <!-- Botón Volver -->
+            <VBox alignment="CENTER" spacing="2">
+                <Button fx:id="btnVolverARollCall" onAction="#volverARollCall" prefHeight="38.0" prefWidth="49.0" styleClass="icon-button">
+               <graphic>
+                  <ImageView fitHeight="27.0" fitWidth="29.0" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Assets/icon/Logout_37127.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+                </Button>
+                <Label styleClass="icon-label" text="tornar" />
+            </VBox>
+         <Separator orientation="VERTICAL" prefHeight="33.0" prefWidth="6.0" />
+        </HBox>
+
+        <!-- Etiquetas -->
+        <Label fx:id="lblPersona" alignment="BOTTOM_LEFT" layoutX="564.0" layoutY="62.0" prefHeight="34.0" prefWidth="281.0" text="Label" />
+        <ImageView fitHeight="48.0" fitWidth="63.0" layoutX="516.0" layoutY="49.0" pickOnBounds="true" preserveRatio="true">
+            <image><Image url="@../../Assets/icon/boy-scout.png" /></image>
+        </ImageView>
+      <HBox layoutY="-3.0" prefHeight="14.0" prefWidth="1563.0">
+         <children>
+            <fx:include source="../GLOBAL/ComponenteCerrarSesion.fxml" />
+         </children>
+      </HBox>
+    </children>
+</AnchorPane>

@@ -1,0 +1,65 @@
+/* Estilos generales de la alerta */
+.dialog-pane {
+    -fx-background-color: #FFFFFF;  /* Fondo blanco para la alerta */
+    -fx-border-color: #DEE2E6;      /* Borde gris claro */
+    -fx-border-radius: 8;           /* Bordes redondeados */
+    -fx-background-radius: 8;       /* Bordes redondeados */
+    -fx-padding: 20px;              /* Espaciado interno */
+    -fx-box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Estilo del texto principal de la alerta */
+.dialog-pane .label.content {
+    -fx-font-family: "Segoe UI", Arial, sans-serif;
+    -fx-font-size: 14px;
+    -fx-text-fill: #495057;         /* Texto gris oscuro */
+    -fx-line-spacing: 1.5;          /* Espaciado entre líneas */
+}
+
+/* Estilos del encabezado de la alerta */
+.dialog-pane .header-panel {
+    -fx-background-color: #F1F3F5; /* Fondo gris claro */
+    -fx-padding: 10px;
+    -fx-border-radius: 6;
+}
+
+.dialog-pane .header-panel .label {
+    -fx-font-family: "Segoe UI", Arial, sans-serif;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;           /* Negrita */
+    -fx-text-fill: black;          /* Color azul para el encabezado */
+}
+
+/* Estilos de los botones de la alerta */
+.dialog-pane .button {
+    -fx-background-color: #007BFF;   /* Azul */
+    -fx-text-fill: white;            /* Texto blanco */
+    -fx-font-size: 14px;
+    -fx-background-radius: 6;        /* Bordes redondeados */
+    -fx-border-radius: 6;
+    -fx-padding: 6px 10px;
+    -fx-cursor: hand;
+    -fx-border-color: #0056B3;       /* Azul más oscuro para el borde */
+    -fx-box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Efecto hover en los botones */
+.dialog-pane .button:hover {
+    -fx-background-color: #0056B3;   /* Azul oscuro */
+}
+
+/* Efecto cuando se presiona el botón */
+.dialog-pane .button:pressed {
+    -fx-background-color: #004085;   /* Azul aún más oscuro */
+}
+
+/* Estilo del ícono (si se usa) */
+.dialog-pane .graphic {
+    -fx-padding: 0 10px 0 0;  /* Espaciado a la derecha del ícono */
+}
+
+/* Separadores entre botones (si hay varios) */
+.dialog-pane .separator {
+    -fx-background-color: #CED4DA;
+    -fx-padding: 5px;
+}

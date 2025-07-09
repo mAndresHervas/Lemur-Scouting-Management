@@ -1,0 +1,85 @@
+/* Estilo general del root */
+.root {
+    -fx-background-color: #F8F9FA;
+    -fx-font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* Tabla de asistencia */
+.table-view {
+    -fx-background-color: white;
+    -fx-border-color: #DEE2E6;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-padding: 10px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 6, 0, 0, 4);
+}
+
+/* Columnas */
+.table-column {
+    -fx-alignment: CENTER-LEFT;
+    -fx-font-size: 14px;
+    -fx-text-fill: #495057;
+    -fx-padding: 10px;
+}
+
+/* ComboBoxes */
+.combo-box {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #CED4DA;
+    -fx-border-radius: 4;
+    -fx-padding: 0 8px;
+}
+
+/* TextField */
+.search-textfield,
+.text-field {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #CED4DA;
+    -fx-border-radius: 4;
+    -fx-padding: 5px 8px;
+}
+
+/* Separadores */
+.separator {
+    -fx-background-color: #CED4DA;
+}
+
+/* Label */
+.label {
+    -fx-font-size: 14px;
+    -fx-text-fill: #495057;
+    -fx-background-color: transparent;  /* Fondo transparente */
+}
+/* Estilo del contenedor de botones con íconos y texto */
+.icon-button-container {
+    -fx-alignment: center;
+    -fx-spacing: 4;
+}
+
+/* Icono dentro del botón */
+.icon-button-container .image-view {
+    -fx-fit-width: 24px;
+    -fx-fit-height: 24px;
+}
+
+/* Texto debajo del icono */
+.icon-label {
+    -fx-font-size: 11px;
+    -fx-text-fill: #212529;
+    -fx-alignment: center;
+}
+
+.button {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-border-width: 0;
+    -fx-padding: 0;
+    -fx-cursor: hand;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+.button:hover {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}

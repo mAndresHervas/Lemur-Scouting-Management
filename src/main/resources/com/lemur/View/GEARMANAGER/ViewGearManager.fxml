@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane fx:id="root" prefHeight="989.0" prefWidth="1378.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lemur.GEARMANAGER.controller.ControllerGearManager">
+   <children>
+
+      <!-- TableView + ProgressIndicator sobrepuestos -->
+      <StackPane layoutY="119.0" prefHeight="1197.0" prefWidth="2045.0">
+         <children>
+            <TableView fx:id="attendanceTableProducto" prefHeight="874.0" prefWidth="1562.0" styleClass="table-view">
+               <columns>
+                  <TableColumn fx:id="colNombreProducto" prefWidth="184.80002403259277" text="Nom" />
+                  <TableColumn fx:id="colCantidadProducto" prefWidth="170.4000244140625" text="Cantitat" />
+                  <TableColumn fx:id="colSeccionProducto" prefWidth="309.5998840332031" text="Seccio" />
+                  <TableColumn fx:id="colEstatus" prefWidth="199.199951171875" text="Estatus" />
+               </columns>
+            </TableView>
+
+            <!-- ProgressIndicator sobre la tabla -->
+            <ProgressIndicator fx:id="progressIndicator" maxHeight="156.0" maxWidth="181.0" prefHeight="156.0" prefWidth="181.0" progress="0.0" />
+         </children>
+      </StackPane>
+
+      <!-- Controles adicionales -->
+      <ComboBox fx:id="comboSeccion" layoutX="1113.0" layoutY="63.0" prefHeight="26.0" prefWidth="99.0" promptText="Seccio" />
+      <ComboBox fx:id="comboOpcionesGM" layoutX="1219.0" layoutY="63.0" prefHeight="26.0" prefWidth="106.0" promptText="Estatus" />
+      <TextField fx:id="txtBusquedaProducto" layoutX="1336.0" layoutY="58.0" prefHeight="36.0" prefWidth="154.0" promptText="Busca...." />
+
+      <!-- Botonera superior -->
+      <HBox layoutX="14.0" layoutY="45.0" prefHeight="51.0" prefWidth="1086.0" spacing="20.0">
+         <children>
+            <VBox alignment="CENTER">
+               <Button fx:id="btnAnyadirProducto" onAction="#abrirViewAnyadirProducto" prefHeight="17.0" prefWidth="38.0">
+                  <cursor>
+                     <Cursor fx:constant="HAND" />
+                  </cursor>
+                  <graphic>
+                     <ImageView fitHeight="28.0" fitWidth="27.0" preserveRatio="true">
+                        <image>
+                           <Image url="@../../Assets/icon/agregar-producto.png" />
+                        </image>
+                     </ImageView>
+                  </graphic>
+               </Button>
+               <Label alignment="CENTER" prefHeight="18.0" prefWidth="89.0" text="Afegir" />
+            </VBox>
+
+            <VBox alignment="CENTER">
+               <Button fx:id="btnEditarProducto" onAction="#abrirViewActualizarProducto">
+                  <cursor>
+                     <Cursor fx:constant="HAND" />
+                  </cursor>
+                  <graphic>
+                     <ImageView fitHeight="32.0" fitWidth="36.0" preserveRatio="true">
+                        <image>
+                           <Image url="@../../Assets/icon/diseno-de-producto.png" />
+                        </image>
+                     </ImageView>
+                  </graphic>
+               </Button>
+               <Label alignment="CENTER" prefHeight="18.0" prefWidth="111.0" text="Editar" />
+            </VBox>
+
+            <VBox alignment="CENTER">
+               <Button fx:id="btnEliminarProducto" onAction="#eliminarProducto">
+                  <cursor>
+                     <Cursor fx:constant="HAND" />
+                  </cursor>
+                  <graphic>
+                     <ImageView fitHeight="28.0" fitWidth="27.0" preserveRatio="true">
+                        <image>
+                           <Image url="@../../Assets/icon/eliminar-producto.png" />
+                        </image>
+                     </ImageView>
+                  </graphic>
+               </Button>
+               <Label alignment="CENTER" prefHeight="18.0" prefWidth="90.0" text="Eliminar" />
+            </VBox>
+
+            <VBox alignment="CENTER">
+               <Button fx:id="btnIncrementarCantidad" onAction="#anyadirExistencias">
+                  <cursor>
+                     <Cursor fx:constant="HAND" />
+                  </cursor>
+                  <graphic>
+                     <ImageView fitHeight="28.0" fitWidth="27.0" preserveRatio="true">
+                        <image>
+                           <Image url="@../../Assets/icon/incrementar.png" />
+                        </image>
+                     </ImageView>
+                  </graphic>
+               </Button>
+               <Label alignment="CENTER" prefHeight="18.0" prefWidth="123.0" text="Incrementar" />
+            </VBox>
+
+            <VBox alignment="CENTER">
+               <Button fx:id="btnDecrementarCantidad" onAction="#eliminarExistencias">
+                  <cursor>
+                     <Cursor fx:constant="HAND" />
+                  </cursor>
+                  <graphic>
+                     <ImageView fitHeight="28.0" fitWidth="27.0" preserveRatio="true">
+                        <image>
+                           <Image url="@../../Assets/icon/decrementar.png" />
+                        </image>
+                     </ImageView>
+                  </graphic>
+               </Button>
+               <Label alignment="CENTER" prefHeight="18.0" prefWidth="126.0" text="Decrementar" />
+            </VBox>
+            <VBox alignment="CENTER">
+               <Button fx:id="btnTiendas" onAction="#abrirViewTienda">
+                  <cursor>
+                     <Cursor fx:constant="HAND" />
+                  </cursor>
+                  <graphic>
+                     <ImageView fitHeight="28.0" fitWidth="27.0" preserveRatio="true">
+                        <image>
+                           <Image url="@../../Assets/icon/campana.png" />
+                        </image>
+                     </ImageView>
+                  </graphic>
+               </Button>
+               <Label alignment="CENTER" prefHeight="18.0" prefWidth="126.0" text="Tendes" />
+            </VBox>
+
+            <Separator orientation="VERTICAL" prefHeight="82.0" />
+            <VBox alignment="CENTER">
+               <children>
+                  <Button fx:id="btnImportarCSVProducto" onAction="#importarCSVAlatabla" prefHeight="27.0" prefWidth="28.0">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <graphic>
+                        <ImageView fitHeight="28.0" fitWidth="27.0" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Assets/icon/importar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Label alignment="CENTER" prefHeight="26.0" prefWidth="125.0" text="Importar CSV" />
+               </children>
+            </VBox>
+
+            <VBox alignment="CENTER">
+               <Button fx:id="btnListaCompra" onAction="#abrirViewListaCompra">
+                  <cursor>
+                     <Cursor fx:constant="HAND" />
+                  </cursor>
+                  <graphic>
+                     <ImageView fitHeight="28.0" fitWidth="27.0" preserveRatio="true">
+                        <image>
+                           <Image url="@../../Assets/icon/compra.png" />
+                        </image>
+                     </ImageView>
+                  </graphic>
+               </Button>
+               <Label alignment="CENTER" prefHeight="18.0" prefWidth="168.0" text="Llista Compra PDF" />
+            </VBox>
+
+            <VBox alignment="CENTER">
+               <Button fx:id="btnExportarCSVProducto" onAction="#enviarInfoParaCSV">
+                  <cursor>
+                     <Cursor fx:constant="HAND" />
+                  </cursor>
+                  <graphic>
+                     <ImageView fitHeight="28.0" fitWidth="27.0" preserveRatio="true">
+                        <image>
+                           <Image url="@../../Assets/icon/exportarCSV.png" />
+                        </image>
+                     </ImageView>
+                  </graphic>
+               </Button>
+               <Label alignment="CENTER" prefHeight="18.0" prefWidth="114.0" text="Exportar CSV" />
+            </VBox>
+
+            <VBox alignment="CENTER">
+               <Button fx:id="btnExportarPDFProducto" onAction="#enviarInfoParaPDF">
+                  <cursor>
+                     <Cursor fx:constant="HAND" />
+                  </cursor>
+                  <graphic>
+                     <ImageView fitHeight="28.0" fitWidth="27.0" preserveRatio="true">
+                        <image>
+                           <Image url="@../../Assets/icon/exportarPDF.png" />
+                        </image>
+                     </ImageView>
+                  </graphic>
+               </Button>
+               <Label alignment="CENTER" prefHeight="18.0" prefWidth="115.0" text="Exportar PDF" />
+            </VBox>
+
+            <Separator orientation="VERTICAL" prefHeight="82.0" />
+         </children>
+      </HBox>
+
+      <HBox layoutX="-2.0" prefHeight="14.0" prefWidth="1563.0">
+         <children>
+            <fx:include source="../GLOBAL/ComponenteCerrarSesion.fxml" />
+         </children>
+      </HBox>
+
+   </children>
+</AnchorPane>

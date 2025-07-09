@@ -1,0 +1,49 @@
+/* Estilos generales - manteniendo coherencia con el login */
+.root {
+    -fx-background-color: #f5f5f5;
+    -fx-font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* Estilo para las imágenes de módulos (Roll Call y Gear Manager) */
+.image-view {
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 5);
+    -fx-cursor: hand;
+    -fx-opacity: 0.9;
+}
+
+.image-view:hover {
+    -fx-opacity: 1;
+    -fx-effect: dropshadow(three-pass-box, rgba(52,152,219,0.3), 15, 0, 0, 5);
+}
+
+/* Estilo para los botones de módulos (consistente con login) */
+.button {
+    -fx-background-color: #3498db;
+    -fx-text-fill: white;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 5px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 5, 0, 0, 1);
+    -fx-cursor: hand;
+}
+
+.button:hover {
+    -fx-background-color: #2980b9;
+}
+
+.button:pressed {
+    -fx-background-color: #1a5276;
+}
+
+/* Estilo para el área de usuario (superior izquierda) */
+#lblUser {
+    -fx-font-size: 20px;
+    -fx-text-fill: #2c3e50;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(one-pass-box, rgba(0,0,0,0.1), 2, 0, 0, 1);
+}
+
+/* Estilo para el icono de usuario */
+.image-view:first-child { /* Selector para el logo Brownie */
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 5, 0, 0, 3);
+}

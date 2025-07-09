@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<AnchorPane fx:id="root" prefHeight="1105.0" prefWidth="2026.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lemur.FOODSAFE.controller.ControllerMenu">
+    <StackPane fx:id="stackpane" layoutY="119.0" prefHeight="986.0" prefWidth="2047.0">
+        <children>
+            <TableView fx:id="attendanceTable" prefHeight="986.0" prefWidth="2050.0" styleClass="table-view">
+                <columns>
+                    <TableColumn fx:id="colNom" prefWidth="188.0" text="XXXX" />
+                    <TableColumn fx:id="colCognoms" prefWidth="201.6" text="XXXX" />
+                    <TableColumn fx:id="colFaltesJustificades" prefWidth="133.6" text="XXXX" />
+                    <TableColumn fx:id="colFaltes" prefWidth="136.8" text="XXXX" />
+                    <TableColumn fx:id="colStatuBranca" prefWidth="172.8" text="XXXX" />
+                </columns>
+            </TableView>
+
+            <ProgressIndicator fx:id="progressIndicator" maxHeight="156.0" maxWidth="181.0" prefHeight="156.0" prefWidth="181.0" progress="0.0" />
+        </children>
+    </StackPane>
+    <HBox layoutX="14.0" layoutY="44.0" prefHeight="60.0" prefWidth="649.0" spacing="20">
+        <VBox alignment="CENTER" spacing="2">
+            <Button prefHeight="32.0" prefWidth="31.0" styleClass="icon-button">
+                <graphic>
+                    <ImageView fitHeight="41.0" fitWidth="46.0" preserveRatio="true">
+                        <image>
+                            <Image url="@../../Assets/icon/food.png" />
+                        </image>
+                    </ImageView>
+                </graphic>
+                <cursor><Cursor fx:constant="HAND" /></cursor>
+            </Button>
+            <Label styleClass="icon-label" text="Afegir" />
+        </VBox>
+
+        <VBox alignment="CENTER" spacing="2">
+            <Button prefHeight="35.0" prefWidth="30.0" styleClass="icon-button">
+                <graphic>
+                    <ImageView fitHeight="42.0" fitWidth="42.0" preserveRatio="true">
+                        <image>
+                            <Image url="@../../Assets/icon/slice.png" />
+                        </image>
+                    </ImageView>
+                </graphic>
+                <cursor>
+                    <Cursor fx:constant="HAND" />
+                </cursor>
+            </Button>
+            <Label styleClass="icon-label" text="Editar" />
+        </VBox>
+
+        <VBox alignment="CENTER" spacing="2">
+            <Button prefHeight="35.0" prefWidth="30.0" styleClass="icon-button">
+                <graphic>
+                    <ImageView fitHeight="42.0" fitWidth="39.0" preserveRatio="true">
+                        <image><Image url="@../../Assets/icon/eliminar.png" /></image>
+                    </ImageView>
+                </graphic>
+                <cursor><Cursor fx:constant="HAND" /></cursor>
+            </Button>
+            <Label styleClass="icon-label" text="Eliminar" />
+        </VBox>
+
+        <Separator orientation="VERTICAL" prefHeight="33.0" prefWidth="6.0" />
+        <VBox alignment="CENTER" spacing="2">
+            <children>
+                <Button prefHeight="35.0" prefWidth="30.0" styleClass="icon-button">
+                    <graphic>
+                        <ImageView fitHeight="42.0" fitWidth="39.0" preserveRatio="true">
+                            <image>
+                                <Image url="@../../Assets/icon/in-stock.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Button>
+                <Label styleClass="icon-label" text="Disponibilitat" />
+            </children>
+        </VBox>
+
+        <Separator orientation="VERTICAL" prefHeight="33.0" prefWidth="6.0" />
+
+        <VBox alignment="CENTER" spacing="2">
+            <Button prefHeight="27.0" prefWidth="29.0" styleClass="icon-button">
+                <graphic>
+                    <ImageView fitHeight="40.0" fitWidth="43.0" preserveRatio="true">
+                        <image><Image url="@../../Assets/icon/exportarCSV.png" /></image>
+                    </ImageView>
+                </graphic>
+                <cursor><Cursor fx:constant="HAND" /></cursor>
+            </Button>
+            <Label prefHeight="17.0" prefWidth="79.0" styleClass="icon-label" text="Exportar CSV" />
+        </VBox>
+
+        <VBox alignment="CENTER" spacing="2">
+            <Button prefHeight="24.0" prefWidth="47.0" styleClass="icon-button">
+                <graphic>
+                    <ImageView fitHeight="38.0" fitWidth="42.0" preserveRatio="true">
+                        <image><Image url="@../../Assets/icon/exportarPDF.png" /></image>
+                    </ImageView>
+                </graphic>
+                <cursor><Cursor fx:constant="HAND" /></cursor>
+            </Button>
+            <Label prefHeight="17.0" prefWidth="80.0" styleClass="icon-label" text="Exportar PDF" />
+        </VBox>
+
+        <Separator orientation="VERTICAL" prefHeight="33.0" prefWidth="6.0" />
+        <VBox alignment="CENTER" prefHeight="60.0" prefWidth="57.0" spacing="2">
+            <children>
+                <Button prefHeight="24.0" prefWidth="47.0" styleClass="icon-button">
+                    <graphic>
+                        <ImageView fitHeight="38.0" fitWidth="40.0" preserveRatio="true">
+                            <image>
+                                <Image url="@../../Assets/icon/Logout_37127.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Button>
+                <Label prefHeight="17.0" prefWidth="75.0" styleClass="icon-label" text="tornar" textAlignment="JUSTIFY" />
+            </children>
+        </VBox>
+        <Separator orientation="VERTICAL" prefHeight="33.0" prefWidth="6.0" />
+    </HBox>
+
+    <!-- Filtros y búsqueda -->
+    <ComboBox fx:id="comboBranca" layoutX="663.0" layoutY="61.0" prefHeight="25.0" prefWidth="98.0" promptText="Branca" styleClass="combo-box" />
+    <TextField fx:id="txtBusqueda" layoutX="790.0" layoutY="56.0" prefHeight="36.0" prefWidth="161.0" promptText="Busca..." styleClass="search-textfield" />
+
+    <!-- Componente cierre de sesión -->
+    <HBox layoutY="-1.0" prefHeight="34.0" prefWidth="2037.0">
+        <children>
+            <fx:include source="../GLOBAL/ComponenteCerrarSesion.fxml" />
+        </children>
+    </HBox>
+
+</AnchorPane>
+

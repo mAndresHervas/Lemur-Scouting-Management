@@ -1,0 +1,243 @@
+/* ---------------------- */
+/* ESTILOS PARA BOTONES   */
+/* ---------------------- */
+
+.button {
+    -fx-background-color: #007BFF;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: 600;
+    -fx-padding: 8px 16px;
+    -fx-background-radius: 4px;
+    -fx-border-radius: 4px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 2, 0, 0, 1);
+    -fx-transition: all 0.2s;
+}
+
+.button:hover {
+    -fx-background-color: #0069D9;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 4, 0, 0, 2);
+}
+
+.button:pressed {
+    -fx-background-color: #0056B3;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 1, 0, 0, 0);
+}
+
+.button:disabled {
+    -fx-opacity: 0.65;
+    -fx-background-color: #6C757D;
+}
+
+/* Botón con icono */
+.button .image-view {
+    -fx-fit-width: 16px;
+    -fx-fit-height: 16px;
+}
+
+/* Variantes de botones */
+.primary-button {
+    -fx-background-color: #007BFF;
+}
+
+.success-button {
+    -fx-background-color: #28A745;
+}
+
+.success-button:hover {
+    -fx-background-color: #218838;
+}
+
+.danger-button {
+    -fx-background-color: #DC3545;
+}
+
+.danger-button:hover {
+    -fx-background-color: #C82333;
+}
+
+.warning-button {
+    -fx-background-color: #FFC107;
+    -fx-text-fill: #212529;
+}
+
+.warning-button:hover {
+    -fx-background-color: #E0A800;
+}
+
+/* ---------------------- */
+/* ESTILOS PARA SPINNER   */
+/* ---------------------- */
+
+.spinner {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #CED4DA;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+}
+
+.spinner .text-field {
+    -fx-background-color: transparent;
+    -fx-padding: 6px 10px;
+    -fx-font-size: 14px;
+}
+
+.spinner .increment-arrow-button,
+.spinner .decrement-arrow-button {
+    -fx-background-color: #F8F9FA;
+    -fx-border-color: #CED4DA;
+    -fx-background-radius: 0;
+}
+
+.spinner .increment-arrow-button:hover,
+.spinner .decrement-arrow-button:hover {
+    -fx-background-color: #E9ECEF;
+}
+
+.spinner .increment-arrow,
+.spinner .decrement-arrow {
+    -fx-background-color: #6C757D;
+}
+
+.spinner:focused {
+    -fx-border-color: #80BDFF;
+    -fx-effect: dropshadow(gaussian, rgba(0,123,255,0.25), 4, 0, 0, 0);
+}
+
+/* ---------------------- */
+/* ESTILOS PARA COMBOBOX */
+/* ---------------------- */
+
+.combo-box {
+    -fx-background-color: white;
+    -fx-border-color: #CED4DA;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+    -fx-padding: 0;
+    -fx-font-size: 14px;
+}
+
+.combo-box .arrow-button {
+    -fx-background-color: #F8F9FA;
+    -fx-border-color: transparent;
+    -fx-background-radius: 0;
+}
+
+.combo-box .arrow {
+    -fx-background-color: #6C757D;
+}
+
+.combo-box .list-cell {
+    -fx-background-color: white;
+    -fx-padding: 6px 10px;
+}
+
+.combo-box .list-view {
+    -fx-background-color: white;
+    -fx-border-color: #CED4DA;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 4, 0, 0, 0);
+}
+
+.combo-box .list-cell:hover {
+    -fx-background-color: #F8F9FA;
+}
+
+.combo-box .list-cell:selected {
+    -fx-background-color: white;
+    -fx-text-fill: black;
+}
+
+.combo-box:focused {
+    -fx-border-color: #80BDFF;
+    -fx-effect: dropshadow(gaussian, rgba(0,123,255,0.25), 4, 0, 0, 0);
+}
+
+/* ---------------------- */
+/* ESTILOS PARA SEPARADOR */
+/* ---------------------- */
+
+.separator {
+    -fx-background-color: #DEE2E6;
+    -fx-padding: 0;
+}
+
+.separator:horizontal .line {
+    -fx-border-color: #DEE2E6 transparent transparent transparent;
+    -fx-border-width: 1px;
+}
+
+.separator:vertical .line {
+    -fx-border-color: transparent #DEE2E6 transparent transparent;
+    -fx-border-width: 1px;
+}
+
+/* Separador con texto */
+.separator-with-text {
+    -fx-alignment: center;
+    -fx-spacing: 10px;
+}
+
+.separator-with-text .label {
+    -fx-text-fill: #6C757D;
+    -fx-font-size: 12px;
+    -fx-padding: 0 5px;
+}
+
+/* ---------------------- */
+/* ESTILOS PARA DATE PICKER */
+/* ---------------------- */
+
+.date-picker {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #CED4DA;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+}
+
+.date-picker .arrow-button {
+    -fx-background-color: #F8F9FA;
+    -fx-border-color: transparent;
+    -fx-background-radius: 0;
+}
+
+.date-picker .text-field {
+    -fx-background-color: transparent;
+    -fx-padding: 6px 10px;
+}
+
+.date-picker-popup {
+    -fx-border-color: #CED4DA;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 4, 0, 0, 0);
+}
+
+.date-picker-popup .month-year-pane {
+    -fx-background-color: #F8F9FA;
+}
+
+.date-picker-popup .spinner .button {
+    -fx-background-color: transparent;
+    -fx-background-radius: 0;
+}
+
+.date-picker-popup .day-cell {
+    -fx-background-color: white;
+}
+
+.date-picker-popup .day-cell:hover {
+    -fx-background-color: #E9ECEF;
+}
+
+.date-picker-popup .day-cell:selected {
+    -fx-background-color: #007BFF;
+    -fx-text-fill: white;
+}
+
+.date-picker-popup .today {
+    -fx-background-color: #E9ECEF;
+    -fx-font-weight: bold;
+}

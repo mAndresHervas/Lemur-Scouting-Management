@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="846.0" prefWidth="689.0" styleClass="container" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lemur.GEARMANAGER.controller.ControllerAnyadirTienda">
+    <children>
+        <VBox alignment="TOP_CENTER" layoutX="20.0" layoutY="20.0" prefHeight="826.0" prefWidth="659.0" spacing="15.0" styleClass="container">
+            <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Assets/icon/anadirFalta.png" />
+               </image>
+            </ImageView>
+
+                <Label styleClass="title-label" text="Afegir Tenda" />
+
+                <Separator styleClass="separator" />
+
+                <VBox spacing="8.0">
+                    <Label styleClass="label" text="Nom de la tenda:" />
+                    <TextField fx:id="txtNombreTienda" promptText="Escriu el nom..." styleClass="text-field" />
+                </VBox>
+            <HBox prefHeight="100.0" prefWidth="200.0" spacing="50.0">
+               <children>
+      
+                            <VBox prefHeight="129.0" prefWidth="367.0" spacing="8.0">
+                          <Label styleClass="label" text="Tipus de tenda:" />
+                          <ComboBox fx:id="comboBoxTipoTienda" prefHeight="34.0" prefWidth="236.0" styleClass="combo-box" />
+                     <Label text="Reparacio:" />
+                     <ComboBox fx:id="comboBoxReparacio" prefHeight="34.0" prefWidth="221.0" />
+                      </VBox>
+                       <VBox prefHeight="128.0" prefWidth="334.0" spacing="8.0">
+                           <Label styleClass="label" text="Piquetes:" />
+                           <Spinner fx:id="spinnerPiquetasTienda" prefHeight="34.0" prefWidth="154.0" styleClass="spinner" />
+                           <Label styleClass="label" text="Tensors:" />
+                           <Spinner fx:id="spinnerTensoresTienda" prefHeight="35.0" prefWidth="170.0" styleClass="spinner" />
+                       </VBox>
+                       <VBox prefHeight="128.0" prefWidth="356.0" spacing="8.0">
+                     <children>
+                        <Label styleClass="label" text="Tacos:" />
+                        <Spinner fx:id="spinnerTacosTienda" prefHeight="34.0" prefWidth="162.0" styleClass="spinner" />
+                             <Label styleClass="label" text="Pals:" />
+                             <Spinner fx:id="spinnerPalosTienda" prefHeight="35.0" prefWidth="162.0" styleClass="spinner" />
+                     </children>
+                       </VBox>
+               </children>
+            </HBox>
+            <HBox prefHeight="63.0" prefWidth="485.0" spacing="50.0">
+               <children>
+      
+                      <VBox prefHeight="63.0" prefWidth="194.0" spacing="8.0">
+                     <children>
+                             <Label styleClass="label" text="Observacions:" />
+                             <TextField fx:id="txtObservacionesTienda" prefHeight="30.0" prefWidth="215.0" promptText="Afegir observacions..." styleClass="text-field" />
+                     </children>
+                      </VBox>
+                  <VBox prefHeight="63.0" prefWidth="324.0" spacing="4.0">
+                     <children>
+                        <Label text="Ultima revisio:" />
+                        <DatePicker fx:id="datePickerUltimaRevisio" prefHeight="32.0" prefWidth="150.0" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+
+                <HBox alignment="CENTER" spacing="20.0">
+                    <Button fx:id="btnAnyadirTienda" onAction="#anyadirTienda" styleClass="button" text="Afegir" />
+                    <Button fx:id="btnCancelarAnyadirTienda" onAction="#cancelar" styleClass="secondary-button" text="Cancel·lar" />
+                    <Button fx:id="btnCancelarAnyadirTiendaYSalir" onAction="#anyadirYSalir" styleClass="secondary-button" text="Afegir i eixir" />
+                </HBox>
+            <Label fx:id="lblAvisosFitxa" prefHeight="18.0" prefWidth="377.0" visible="false" />
+            </children>
+            <padding>
+                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+            </padding>
+        </VBox>
+    </children>
+</AnchorPane>
