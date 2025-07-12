@@ -10,6 +10,7 @@ import java.io.IOException;
 
 public class ControllerTryModule
 {
+    String verificar = "aa";
     LoadViews loadViews = LoadViews.getInstance();
     @FXML
     private Label lblUser;
